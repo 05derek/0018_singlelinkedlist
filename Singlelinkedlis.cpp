@@ -1,9 +1,15 @@
 
-        while ((*current != NULL) && (nim != (*current)->noMhs))
-        {
-            *previous = *current;
-            *current = (*current)->next;
-        }
+    bool delNode(int nim)
+    {
+        Node *current, *previous;
+        if (Search(nim, &previous, &current) == false)
+            return false;
 
-        return (*current != NULL);
+        if (current == START)
+            START = START->next;
+        else
+            previous->next = current->next;
+
+        delete current;
+        return true;
     }
