@@ -1,15 +1,14 @@
 
-    bool delNode(int nim)
+    void traverse()
     {
-        Node *current, *previous;
-        if (Search(nim, &previous, &current) == false)
-            return false;
-
-        if (current == START)
-            START = START->next;
-        else
-            previous->next = current->next;
-
-        delete current;
-        return true;
-    }
+        if (!listEmpty())
+        {
+            Node *currentNode = START;
+            cout << "\nData dalam list adalah:\n";
+            while (currentNode != NULL)
+            {
+                cout << currentNode->noMhs << " ";
+                currentNode = currentNode->next;
+            }
+            cout << endl;
+        }
