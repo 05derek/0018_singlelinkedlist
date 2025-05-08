@@ -1,5 +1,5 @@
 
-    bool listEmpty()
+    bool Search(int nim, Node **previous, Node **current)
     {
-        return (START == NULL);
-    }
+        *previous = START;
+        *current = START;
