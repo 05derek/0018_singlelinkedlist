@@ -1,7 +1,7 @@
 
-        else
-        {
-            cout << "\nList kosong\n";
-        }
-    }
-};
+
+int main()
+{
+    LinkedList mhs;
+    int nim;
+    char ch;
